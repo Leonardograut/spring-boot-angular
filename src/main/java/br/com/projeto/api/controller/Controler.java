@@ -22,8 +22,10 @@ public class Controler {
   }
 
     @GetMapping("/")
-    public String teste(){
-        return "hello world";
+    public Iterable<Cliente>selecionar(){
+        return repositorio.findAll();
     }
+
+
 
 }
