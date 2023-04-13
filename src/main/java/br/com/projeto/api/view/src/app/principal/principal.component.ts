@@ -21,6 +21,9 @@ constructor(private servico:ClienteService){
 
 }
 
+ //objeto do  tipo cliente
+  cliente  = new Cliente();
+
 
   //Metodo de seleçao
   selecionar():void{
@@ -35,6 +38,8 @@ constructor(private servico:ClienteService){
     this.selecionar();
 
   }
+
+
 
 
 }
