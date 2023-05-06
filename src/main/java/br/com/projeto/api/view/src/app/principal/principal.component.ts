@@ -110,6 +110,37 @@ return obj.codigo == retorno.codigo;
 }
 
 
+//Metodo para remover clientes
+remover():void{
+
+  this.servico.remover(this.cliente.codigo)
+  .subscribe(retorno =>{
+
+   //Obter posiçao do vetor onde esta o cliente
+   let posicao = this.clientes.findIndex(obj =>{
+
+return obj.codigo == this.cliente.codigo;
+
+   });
+
+   //Remover cliente no vetor
+     this.clientes.splice(posicao,1);
+
+
+     //limpar formulario
+     this.cliente = new Cliente();
+
+     //visibildade dos botoes 
+     this.tabela = true;
+
+     //mensagem
+     alert ('Cliente Removido com sucesso')
+   })
+
+
+}
+
+
   //Metodo de inicializacao
 
   ngOnInit(){
