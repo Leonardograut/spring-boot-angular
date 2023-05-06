@@ -140,6 +140,21 @@ return obj.codigo == this.cliente.codigo;
 
 }
 
+ //Metodo para cancelar 
+ cancelar():void{
+
+  
+     //limpar formulario
+     this.cliente = new Cliente();
+
+     //visibildade dos botoes 
+     this.tabela = true;
+
+     //visibilidade da tabela
+     this.tabela = true;
+
+ }
+
 
   //Metodo de inicializacao
 
