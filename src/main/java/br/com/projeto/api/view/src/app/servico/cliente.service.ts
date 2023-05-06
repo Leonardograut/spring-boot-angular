@@ -26,6 +26,12 @@ cadastrar(obj:Cliente):Observable<Cliente>{
 return this.http.post<Cliente>(this.url,obj);  
 }
 
+
+//Metodo para editar clientes 
+editar(obj:Cliente):Observable<Cliente>{
+  return this.http.put<Cliente>(this.url,obj);  
+  }
+
 }
 
 

@@ -79,6 +79,36 @@ selecionarCliente(posicao:number):void{
 }
 
 
+//Metodo para editar clientes
+editar():void{
+
+  this.servico.editar(this.cliente)
+  .subscribe(retorno =>{
+
+   //Obter posiçao do vetor onde esta o cliente
+   let posicao = this.clientes.findIndex(obj =>{
+
+return obj.codigo == retorno.codigo;
+
+   });
+
+   //Alterar os dados do cliente no vetor
+     this.clientes[posicao]=retorno;
+
+
+     //limpar formulario
+     this.cliente = new Cliente();
+
+     //visibildade dos botoes 
+     this.tabela = true;
+
+     //mensagem
+     alert ('Cliente alterado com sucesso')
+   })
+
+
+}
+
 
   //Metodo de inicializacao
 
@@ -86,6 +116,7 @@ selecionarCliente(posicao:number):void{
     this.selecionar();
 
   }
+
 
 
 
